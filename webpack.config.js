@@ -1,11 +1,13 @@
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry:{
     main: "./src/js/main.js"
   },
   output:{
-    path: require("path").resolve("./dist/js/"),
-    filename: "[chunkhash:8].[name].js",
-    cunkFilename: "[chunkhash:8].chunk.js"
+    path: require("path").resolve("./dist/"),
+    filename: "./js/[name].js",
+    chunkFilename: "./js/chunk.js"
   },
   module: {
     loaders: [
@@ -15,5 +17,11 @@ module.exports = {
   },
   reslove:{
     extensions: ["", "js", "css"]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "home.html",
+      template: "src/app/home.html"
+    })
+  ]
 }

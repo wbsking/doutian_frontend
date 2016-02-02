@@ -20,6 +20,5 @@ gulp.task("less", function(){
 })
 
 gulp.task("watch", function(){
-  gulp.watch(["./src/app/*.html"], ["html"]);
-  gulp.watch(["./src/static/css/**"], ["less"]);
+  gulp.watch(["./src/css/**"], ["less"]);
 })
