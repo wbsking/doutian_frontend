@@ -43,6 +43,10 @@ img{
     display: block;
 }
 
+.hide {
+  display: none !important;
+}
+
 #NavHeader {
   width: 100%;
   position: fixed;
@@ -188,5 +192,47 @@ img{
     border-right-style: solid;
     border-right-color: rgba(200, 200, 200, 0.5);
     border-right-width: 1px;
+  }
+}
+
+#AboutFooter {
+  width: 80px;
+  text-align: center;
+  height: 30px;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  cursor: pointer;
+
+  a {
+    color: rgba(240, 240, 240, 0.65);
+  }
+}
+
+#ScrollTop {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  color: rgba(240, 240, 240, 0.65);
+  cursor: pointer;
+}
+
+#Beian {
+  width: 200px;
+  height: 20px;
+  text-align: left;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: -10;
+
+  a {
+    color: rgba(240, 240, 240, 0.65);
   }
 }

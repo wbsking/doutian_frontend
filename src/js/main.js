@@ -9,9 +9,7 @@ var Route = ReactRouter.Route;
 var App = React.createClass({
   render: function(){
     return (
-      <div id="mainContent">
-        <HomePage />
-      </div>
+      <HomePage />
     );
   }
 });
