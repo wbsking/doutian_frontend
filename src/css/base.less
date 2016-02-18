@@ -24,7 +24,6 @@ body, div{
     margin: 0;
     padding: 0;
     border: 0;
-    overflow: hidden;
     vertical-align: baseline;
 }
 
@@ -47,9 +46,27 @@ img{
   display: none !important;
 }
 
+.private_choiced {
+    background-color: #cc3366 !important;
+}
+
+.public_choiced {
+    background-color: #00cccc !important;
+}
+
+.cate_public {
+    color: #00cccc !important;
+}
+
+.cate_private {
+    color: #cc3366 !important;
+}
+
 #NavHeader {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   background-color: @background_color;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -234,5 +251,141 @@ img{
 
   a {
     color: rgba(240, 240, 240, 0.65);
+  }
+}
+
+.createPop {
+  width: 800px;
+  margin: 50px auto;
+  background-color: white;
+
+  .label {
+    padding-top: 10px;
+    color: rgba(50, 50, 50, 0.65);
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .row {
+    width: 100%;
+    margin-top: 5px;
+
+    input {
+      width: 100%;
+      height: 40px;
+      border: 0;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(140, 140, 140, 0.2);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 3rem;
+      border: 0;
+      border-bottom: 1px solid rgba(140, 140, 140, 0.2);
+      outline-width: 0;
+      outline-style: none;
+      font-size: 16px;
+      padding: 1.6rem 0;
+      resize: none;
+    }
+  }
+
+  .form_control {
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid rgba(50, 50, 50, 0.1);
+
+    .close_btn, .create_btn{
+      width: 70px;
+      height: 30px;
+      line-height: 30px;
+      margin: 20px 0 0 20px;
+      float: left;
+      font-size: 14px;
+      cursor: pointer;
+      color: white;
+      text-align: center;
+      border-radius: 3px;
+      padding: 0;
+      background-color: #9da6af;
+    }
+
+    .create_btn {
+      margin: 20px 20px 0 0;
+      float: right;
+      background-color: #529ecc;
+    }
+  }
+  .cate_ele {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 0 0 15px 20px;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 3px;
+    cursor: pointer;
+    color: rgba(240, 240, 240, 0.95);
+  }
+}
+
+#CreateCatePop, #CreateBlogPop {
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  position: fixed;
+  background-color: rgba(54, 70, 93, 0.95);
+}
+
+#CreateBlogPop {
+  display: block;
+}
+
+#CreateCate {
+  .cate_type {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 12px;
+    color: rgba(240, 240, 240, .95);
+
+    div {
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 0 0 20px;
+      padding: 0 10px;
+      border-radius: 3px;
+      background-color: rgba(100, 100, 100, 0.5);
+    }
+
+    #allowDiv {
+      background-color: white;
+      display: inline-block;
+    }
+  }
+
+  .cate_type_desc {
+    margin: 0 0 10px 20px;
+    font-size: 14px;
+    color: rgba(100, 100, 100, .5);
+  }
+
+  .private_desc {
+    display: block;
+  }
+
+  .public_desc {
+    display: none;
   }
 }
