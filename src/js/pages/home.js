@@ -9,6 +9,7 @@ var $ = require("jquery");
 var UserInfoStore = require("../stores/UserInfoStore");
 var CreateCatePop = require("../components/popup/CreateCate");
 var CreateBlogPop = require("../components/popup/CreateBlog");
+var CreateImgPop = require("../components/popup/CreateImg");
 
 
 var HomePage = module.exports = React.createClass({
@@ -49,6 +50,7 @@ var HomePage = module.exports = React.createClass({
         </div>
         <CreateCatePop />
         <CreateBlogPop />
+        <CreateImgPop />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 var React = require("react");
 
-CreateBlogPop = module.exports = React.createClass({
+var CreateBlogPop = module.exports = React.createClass({
   render: function(){
     return (
       <div id="CreateBlogPop">
